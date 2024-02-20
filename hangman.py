@@ -1,13 +1,13 @@
 from random_word import RandomWords
 
 class Word:
-    def __init__(self, word):
-        self.word = word
+    def __init__(self, test):
+        self.test = test
         self.guessedLetters = []
 
     def displayWord(self):
         displayedWord = ""
-        for letter in self.word:
+        for letter in self.test:
             if letter in self.guessedLetters:
                 displayedWord += letter
             else:
@@ -16,7 +16,7 @@ class Word:
 
     def checkGuess(self, guess):
         self.guessedLetters.append(guess)
-        return guess in self.word
+        return guess in self.test
     
 
 class HangManGame:
